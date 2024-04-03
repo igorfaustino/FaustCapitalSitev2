@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Book', 'Arial';
+            color: #fff;
+        }
+
+        header {
+            background-color: #1E1D2E;
+            color: #00FF88;
+            text-align: center;
+            padding: 40px 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0 20px;
+            font-size: 36px;
+            font-family: 'Century Gothic', 'Good Vibes';
+        }
+
+        img {
+            max-height: 60px;
+        }
+
+        h2 {
+            color: #77ffc0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00FF88;
+            transition: color 0.3s ease;
+        }
+
+        .section {
+            position: relative;
+            padding: 80px 20px;
+            opacity: 1; /* Alterado para 1 para que as seções sejam exibidas imediatamente */
+            background-position: center;
+            background-size: cover;
+            color: #fff; /* Adicionado para garantir contraste de texto */
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Adicionado para garantir contraste de texto */
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.66); /* Ajuste a opacidade conforme necessário */
+            z-index: 0;
+        }
+
+        footer {
+            background-color: #1E1D2E;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+
+        body.show-footer footer {
+            opacity: 1;
+        }
+
+        /* Adicionado para garantir contraste de texto */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+            z-index: 0;
+        }
+
+        /* Adicionado regra de mídia para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            body {
+                color: #fff;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            img {
+                max-height: 30px;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            .section-content {
+                max-width: 100%;
+            }
+            footer {
+            background-color: #1E1D2E;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 1;
+            transition: opacity 0.5s;
+            bottom: 0;
+            width: 100%;
+            position: relative;
+        }
+        }
+    </style>
+    <title>faust capital</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.jpg" alt="Logo Faust Capital">
+            <h1>faust capital</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="navigateTo('#home')">Início</a></li>
+                <li><a href="#sobre" onclick="navigateTo('#sobre')">Sobre Nós</a></li>
+                <li><a href="#servicos" onclick="navigateTo('#servicos')">Serviços</a></li>
+                <li><a href="#contato" onclick="navigateTo('#contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section" style="background-image: url('images/01.jpg');">
+        <div class="section-content">
+            <h2>Bem-vindo à Faust Capital</h2>
+            <p>Sua parceira em investimentos sólidos desde 2020. Na Faust Capital, estamos comprometidos em proporcionar oportunidades de crescimento financeiro sustentável para nossos clientes.</p>
+        </div>
+    </section>
+
+    <section id="sobre" class="section" style="background-image: url('images/02.jpg');">
+        <div class="section-content">
+            <h2>Sobre Nós</h2>
+            <p>A Faust Capital é uma empresa de investimentos na bolsa de valores estabelecida em 2020. Nosso objetivo é oferecer serviços de alta qualidade, orientando nossos clientes para tomar decisões informadas e bem-sucedidas no mercado financeiro.</p>
+        </div>
+    </section>
+
+    <section id="servicos" class="section" style="background-image: url('images/03.jpg');">
+        <div class="section-content">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos uma variedade de serviços de investimento adaptados às necessidades individuais de nossos clientes. Desde consultoria personalizada até estratégias de portfólio, estamos aqui para ajudá-lo a alcançar seus objetivos financeiros.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="section" style="background-image: url('images/04.jpg');">
+        <div class="section-content">
+            <h2>Contato</h2>
+            <p>Estamos prontos para responder às suas dúvidas e discutir como podemos colaborar para o seu sucesso financeiro. Entre em contato conosco para uma consulta personalizada.</p>
+            <p>Email: igorfaustinosouza@gmail.com</p>
+            <p>WhatsApp: (44) 99875-6202</p>
+            <p>Instagram: @igorfaustino44</p>
+        </div>
+    </section>
+
+    <section id="destaque" class="section" style="background-image: url('images/05.jpg');">
+        <div class="section-content">
+            <img src="images/icon.png" alt="Logo Faust Capital">
+            <p>Marialva, PR</p>
+            <p>CNPJ: 54.227.794/0001-50</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Faust Capital. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function navigateTo(sectionId) {
+            var section = document.querySelector(sectionId);
+            section.style.opacity = '0';
+            setTimeout(function () {
+                window.location.href = sectionId;
+            }, 500);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var sections = document.querySelectorAll('.section');
+
+            sections.forEach(function(section) {
+                section.style.transition = 'opacity 0.8s ease';
+                section.style.opacity = '1'; // Adicionado para exibir as seções imediatamente
+            });
+
+            window.addEventListener("scroll", function () {
+                sections.forEach(function(section) {
+                    var isVisible = (window.scrollY + window.innerHeight) >= section.offsetTop && window.scrollY < (section.offsetTop + section.offsetHeight);
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                    } else {
+                        section.style.opacity = '0.5';  // Ajuste a opacidade conforme necessário para se adequar ao seu design
+                    }
+                });
+
+                var footer = document.querySelector('footer');
+                var isVisible = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+
+                if (isVisible) {
+                    document.body.classList.add('show-footer');
+                } else {
+                    document.body.classList.remove('show-footer');
+                }
+            });
+
+            document.querySelectorAll('nav ul li a').forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var targetSectionId = this.getAttribute('href');
+                    var targetSection = document.querySelector(targetSectionId);
+
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Blair ITC', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, section, footer {
+    font-family: 'Blair ITC', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Blair ITC', 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'Franklin Book', 'Arial', sans-serif;
+}
+
+/* Fim das Fontes */
+
+body {
+    font-family: 'Blair ITC', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #2D3047, #504880);
+    transition: background 0.5s ease;
+    color: #fff;
+}
+
+header {
+    background-color: #1E1D2E;
+    color: #00FF88;
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00FF88;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Adição de transição para o box-shadow */
+}
+
+nav ul li a:hover {
+    color: #1E1D2E;
+    background-color: #00FF88;
+    border-color: #00FF88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.8); /* Adição do efeito glow ao passar o mouse */
+}
+
+section {
+    padding: 50px 20px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
